@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 
 import "./App.css";
-import { Header } from "./components/Header";
+import { Header } from "./components/Header.jsx";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnalyticsPage } from "./pages/AnalyticsPage/AnalyticsPage.jsx";
@@ -11,7 +11,6 @@ import { HistoryPage } from "./pages/HistoryPage/HistoryPage.jsx";
 export const App = () => {
   return (
     <Router>
-
       <div className="app-container">
         <Header />
         {/* <main className="app-content"> */}

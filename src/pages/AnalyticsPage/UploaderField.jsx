@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
-import { ButtonUpload } from "./ButtonUpload";
+import { ButtonUpload } from "./ButtonUpload.jsx";
 import styles from "./UploaderField.module.css";
-import { CloseButton } from "../../components/CloseButton";
+import { CloseButton } from "../../components/CloseButton.jsx";
 import { isFileValid } from "../../validation/isFileValid.js";
 import { Spinner } from "../../components/Spinner.jsx";
 
@@ -9,12 +9,12 @@ export const UploaderField = ({
   onFileSelect,
   onDragStateChange,
   state,
-//   sendSetState,
-fileName,
-setFileName
+  //   sendSetState,
+  fileName,
+  setFileName,
 }) => {
   const [isDragging, setIsDragging] = useState(false);
-//   const [fileName, setFileName] = useState("");
+  //   const [fileName, setFileName] = useState("");
 
   const handleFileChange = useCallback(
     (file) => {
@@ -112,9 +112,7 @@ setFileName
         </div>
       )}
 
-      {state === "parsing" && (
-        <Spinner />
-      )}
+      {state === "parsing" && <Spinner />}
 
       <div className={styles.text}>
         {(state === "idle" || state === "dragging") && "или перетащите сюда"}

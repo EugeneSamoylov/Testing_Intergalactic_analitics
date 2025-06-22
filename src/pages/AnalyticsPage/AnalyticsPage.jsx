@@ -5,7 +5,7 @@ import { UploaderField } from "./UploaderField.jsx";
 import { ButtonSend } from "./ButtonSend.jsx";
 import { ListHighlights } from "./ListHighlights.jsx";
 import { arrayFromData } from "../../utils/dataPreparation.js";
-import { uploadFile } from "../../api/fileUploader";
+import { uploadFile } from "../../api/fileUploader.js";
 import { formateDate } from "../../utils/formateData.js";
 
 // const json = {
