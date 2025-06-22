@@ -1,0 +1,22 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  color: #201B10;
+  background-color: #FCE2FF;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+

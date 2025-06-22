@@ -1,0 +1,16 @@
+.button {
+    width: 438px;
+    height: 80px;
+    border-radius: 25px;
+    padding: 15px 27px 15px 27px;
+    background-color: #2AE881;
+    border: 0;
+}
+
+.text {
+    width: 384px;
+    height: 39px;
+    font-weight: 500;
+    font-size: 35px;
+    color: #201B10;
+}

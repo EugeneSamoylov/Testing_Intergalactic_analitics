@@ -1,0 +1,27 @@
+#root {
+  display: flex;
+  /* flex-direction: column; */
+  /* width: 1920px;
+  height: 1080px; */
+  /* top: 273.63px;
+  left: 239px; */
+  margin: 0 auto;
+  /* padding: 40px; */
+  text-align: center;
+  /* row-gap: 80px; */
+  /* box-sizing: border-box; */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 1920px;
+  height: 1080px;
+  /* top: 273.63px;
+  left: 239px; */
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  row-gap: 80px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,100 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1840px;
+    height: 61px;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+
+
+
+.containerLeft, .containerRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerLeft {
+    width: 831.73px;
+    height: 59px;
+    column-gap: 40px;
+}
+
+.containerRight {
+    width: 784px;
+    height: 61px;
+    column-gap: 20px;
+}
+
+
+
+
+.logo {
+    width: 268px;
+    height: 59px;
+}
+
+.naming {
+    display: flex;
+    line-height: 90%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 511px;
+    height: 27px;
+    color: #201B10;
+    background-color: #CB81FF;
+    padding: 4.77px 6.37px 6.37px 6.37px;
+    flex-direction: column;
+}
+
+
+
+.anal, 
+.gen, 
+.history {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: inherit; /* Наследуем цвет текста от родителя */
+}
+
+.anal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 271px;
+    height: 61px;
+    column-gap: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.gen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 283px;
+    height: 61px;
+    column-gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+.history {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
+    height: 61px;
+    column-gap: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+
+.active {
+  border-bottom: 4px solid #201B10;
+  /* Или другие стили для активной ссылки */
+}

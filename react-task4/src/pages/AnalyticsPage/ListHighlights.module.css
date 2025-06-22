@@ -1,0 +1,20 @@
+/* .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 39px;
+    row-gap: 10px;
+    width: 1840px;
+    height: 500px;
+} */
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 39px;
+  width: 1840px;
+  height: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+}

@@ -1,0 +1,16 @@
+.button {
+    width: 276px;
+    height: 80px;
+    border-radius: 25px;
+    padding: 15px 27px 15px 27px;
+    background-color: #201B10;
+    border: 0;
+}
+
+.text {
+    width: 222px;
+    height: 39px;
+    font-weight: 500;
+    font-size: 35px;
+    color: #fff;
+}

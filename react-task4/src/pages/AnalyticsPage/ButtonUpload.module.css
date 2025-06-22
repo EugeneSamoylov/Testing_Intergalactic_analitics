@@ -1,0 +1,19 @@
+.buttonUpload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 361px;
+  height: 70px;
+  row-gap: 10px;
+  font-size: 35px;
+}
+
+.button {
+  width: 361px;
+  height: 70px;
+  border-radius: 10px;
+  border: 0;
+  padding: 15px 27px 15px 27px;
+  background-color: #ffffff;
+  font-size: 35px;
+}

@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  row-gap: 40px;
+  width: 1840px;
+  height: 498px;
+
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: 734px;
+  height: 80px;
+  column-gap: 20px;
+}
+
+

@@ -1,0 +1,9 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1840px;
+  /* max-height: 378px; */
+  row-gap: 10px;
+
+}

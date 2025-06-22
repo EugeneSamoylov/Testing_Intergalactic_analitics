@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  row-gap: 60px;
+  width: 1840px;
+  height: 859px;
+  font-size: 40px;
+
+}
+
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 1840px;
+  height: 392px;
+  text-align: center;
+  row-gap: 20px;
+  box-sizing: border-box;
+  color: #201B10;
+}
+
+.highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  color: #CB81FF;
+  width: 1840px;
+  height: 407px;
+  font-size: 40px;
+}
+
+
+.text {
+  width: 1840px;
+  height: 33px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+span {
+  font-weight: 700;
+  font-size: 30px;
+}
