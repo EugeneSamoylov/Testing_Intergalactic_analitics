@@ -1,4 +1,3 @@
-// src/pages/AnalyticsPage.jsx
 import styles from "./AnalyticsPage.module.css";
 import { useRef, useState } from "react";
 import { UploaderField } from "./UploaderField.jsx";
@@ -8,21 +7,11 @@ import { arrayFromData } from "../../utils/dataPreparation.js";
 import { uploadFile } from "../../api/fileUploader.js";
 import { formateDate } from "../../utils/formateData.js";
 
-// const json = {
-//   total_spend_galactic: 999.8,
-//   rows_affected: 45056,
-//   less_spent_at: 0,
-//   big_spent_at: 364,
-//   big_spent_value: 678899,
-//   average_spend_galactic: 876,
-//   big_spent_civ: "humans",
-//   less_spent_civ: "blobs",
-// };
+
 
 export const AnalyticsPage = () => {
   const [file, setFile] = useState(null);
-  const [uploadState, setUploadState] = useState("idle"); // idle, dragging, error, success, parsing?, done
-  // const [sendState, setSendState] = useState(true); // true, false //не знаю пока нужно ли
+  const [uploadState, setUploadState] = useState("idle");
 
   const [analyticsData, setAnalyticsData] = useState(null);
   const [fileName, setFileName] = useState("");
@@ -40,37 +29,15 @@ export const AnalyticsPage = () => {
 
   const handleDragStateChange = (state) => {
     if (state === "idle") {
-      // new Сброс состояния при клике на крестик
       setAnalyticsData(null);
       setFile(null);
       setFileName("");
-      analyticsDataRef.current = null; // Сбрасываем реф тоже
+      analyticsDataRef.current = null; 
     }
     setUploadState(state);
   };
 
-  // Новая функция для отправки файла
-  // const handleSendFile = async () => {
-  //   if (!file) return;
-
-  //   setUploadState("parsing");
-
-  //   try {
-  //     console.log("Starting file upload...", file.name);
-  //     const response = await uploadFile(file);
-  //     console.log("Server response:", response);
-
-  //     // Пока просто выводим в консоль
-  //     console.log("File processed successfully!");
-  //     setUploadState("done");
-  //   } catch (error) {
-  //     console.error("Error processing file:", error);
-  //     setUploadState("error");
-  //   }
-  // };
-
   const handlePartialData = (partialData) => {
-    // Обновляем и состояние, и реф
     const newData = { ...analyticsDataRef.current, ...partialData };
     analyticsDataRef.current = newData;
     setAnalyticsData(newData);
@@ -80,7 +47,7 @@ export const AnalyticsPage = () => {
     if (!file) return;
 
     setUploadState("parsing");
-    setAnalyticsData(null); // Сброс предыдущих данных
+    setAnalyticsData(null); 
 
     analyticsDataRef.current = {};
 
@@ -89,9 +56,7 @@ export const AnalyticsPage = () => {
         file,
         handlePartialData,
         () => {
-          // Завершение обработки
           setUploadState("done");
-          // saveToLocalStorage(fileName, analyticsDataRef.current);
           saveToLocalStorage(fileName, arrayFromData(analyticsDataRef.current));
         },
         (error) => {
@@ -106,7 +71,6 @@ export const AnalyticsPage = () => {
     }
   };
 
-  // Сохранение результатов в localStorage
   const saveToLocalStorage = (filename, data) => {
     if (!data) {
       console.warn("No data to save");
@@ -122,13 +86,11 @@ export const AnalyticsPage = () => {
         id: Date.now(),
         filename,
         date: formateDate(new Date()),
-        // data: JSON.parse(JSON.stringify(data)),
         data: data,
       };
 
       const updatedHistory = [newEntry, ...history];
 
-      // Сохраняем только последние 10 записей
       const trimmedHistory = updatedHistory.slice(0, 10);
 
       localStorage.setItem("analyticsHistory", JSON.stringify(trimmedHistory));
@@ -150,26 +112,21 @@ export const AnalyticsPage = () => {
           onDragStateChange={handleDragStateChange}
           setUploadState={setUploadState}
           state={uploadState}
-          fileName={fileName} //new
-          setFileName={setFileName} //new
-
-          // sendState={sendState}
+          fileName={fileName} 
+          setFileName={setFileName} 
         />
         {uploadState !== "error" &&
           uploadState !== "parsing" &&
-          uploadState !== "done" && ( //new
+          uploadState !== "done" && ( 
             <ButtonSend
-              // disabled={uploadState !== "success" && uploadState==='idle'}
               hasFile={uploadState === "success"}
               state={uploadState}
-              // sendSetState={setSendState}
               setUploadState={setUploadState}
               onClick={handleSendFile}
             />
           )}
       </div>
 
-      {/* {!json */}
       {!analyticsData && uploadState !== "error" && (
         <div className={styles.highlights}>
           Здесь <br />
@@ -177,7 +134,6 @@ export const AnalyticsPage = () => {
         </div>
       )}
 
-      {/* {!!json */}
       {!!analyticsData && (
         <ListHighlights dataArray={arrayFromData(analyticsData)} />
       )}

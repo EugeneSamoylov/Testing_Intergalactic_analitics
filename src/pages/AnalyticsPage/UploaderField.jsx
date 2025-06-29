@@ -9,12 +9,10 @@ export const UploaderField = ({
   onFileSelect,
   onDragStateChange,
   state,
-  //   sendSetState,
   fileName,
   setFileName,
 }) => {
   const [isDragging, setIsDragging] = useState(false);
-  //   const [fileName, setFileName] = useState("");
 
   const handleFileChange = useCallback(
     (file) => {
@@ -73,7 +71,6 @@ export const UploaderField = ({
 
   const handleReset = () => {
     onDragStateChange("idle");
-    // sendSetState(true);
   };
 
   return (
@@ -97,7 +94,6 @@ export const UploaderField = ({
         </div>
       )}
 
-      {/*нужно доделать*/}
       {state === "done" && (
         <div className={styles.doneContainer}>
           <div className={styles.doneText}>{fileName}</div>

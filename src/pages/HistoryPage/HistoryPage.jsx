@@ -19,7 +19,7 @@ export const HistoryPage = () => {
 
   return (
     <div className={styles.container}>
-      <NotesList notes={notes} setNotes={setNotes} />
+      {Boolean(notes.length) && <NotesList notes={notes} setNotes={setNotes} />}
       <div className={styles.buttons}>
         <ButtonGenerateMore />
         {Boolean(notes.length) && <ButtonClear setNotes={setNotes} />}

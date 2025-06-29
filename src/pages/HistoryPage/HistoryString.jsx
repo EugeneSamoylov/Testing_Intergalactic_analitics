@@ -41,6 +41,7 @@ export const HistoryString = (props) => {
           className={styles.trashContainer}
           onClick={onDelete}
           title="Удалить"
+          aria-label="Удалить"
         >
           <img className={styles.trashImg} src={trash} alt="trash"></img>
         </button>
@@ -49,7 +50,6 @@ export const HistoryString = (props) => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         dataArray={data}
-        // children={children}
       />}
     </>
   );
